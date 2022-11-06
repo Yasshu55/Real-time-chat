@@ -1,5 +1,5 @@
 import React,{useState,createContext} from 'react'
-import {BrowserRouter, Route } from 'react-router-dom';
+import {BrowserRouter, Route, Switch } from 'react-router-dom';
 import Nav from './Nav';
 import Register from './Register';
 import Login from './Login';
@@ -15,11 +15,11 @@ const App = () => {
     <store.Provider value={[token,setToken]}>
       <BrowserRouter>
         <Nav />
-        <Switch>
+        <Switch></Switch>
          <Route path='/register' component={Register} />
          <Route path='/login' component={Login} />
          <Route path='/myprofile' component={Myprofile}></Route>
-        </Switch>
+        
       </BrowserRouter>
     </store.Provider>
 
