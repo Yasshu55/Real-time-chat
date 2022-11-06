@@ -1,6 +1,6 @@
 import React,{useContext,useState,useEffect} from 'react'
 import {store} from './App';
-import { Redirect } from 'react-router';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import Moment from "react-moment";
 
@@ -31,7 +31,7 @@ const Myprofile = () => {
         }).then(res => setAllMsg(res.data)).catch((err) => console.log(err))
     }
     if(!token){
-        return <Redirect to='/login' />
+        return <Link to='/login'/>
     }
     return (
       <div>

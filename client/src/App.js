@@ -1,5 +1,5 @@
 import React,{useState,createContext} from 'react'
-import {BrowserRouter, Route, Switch } from 'react-router-dom';
+import {BrowserRouter, Route } from 'react-router-dom';
 import Nav from './Nav';
 import Register from './Register';
 import Login from './Login';
