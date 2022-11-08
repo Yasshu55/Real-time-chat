@@ -21,7 +21,7 @@ const Myprofile = () => {
               'x-token' : token
           } 
       }).then(res => setAllMsg(res.data)).catch((err) => console.log(err))
-    },[])
+    },[token])
     const submitHandler = (e) =>{
         e.preventDefault();
         axios.post('http://localhost:5000/addmsg',{text:newMsg},{
