@@ -9,6 +9,7 @@ const Myprofile = () => {
     const [data,setData] = useState(null);
     const [allMsg,setAllMsg] = useState([]);
     const [newMsg,setNewMsg] = useState("");
+    
     useEffect(() =>{
         axios.get('http://localhost:5000/myprofile',{
             headers: {
@@ -21,7 +22,9 @@ const Myprofile = () => {
               'x-token' : token
           } 
       }).then(res => setAllMsg(res.data)).catch((err) => console.log(err))
-    },[token])
+// eslint-disable-next-line
+    },[])
+
     const submitHandler = (e) =>{
         e.preventDefault();
         axios.post('http://localhost:5000/addmsg',{text:newMsg},{
